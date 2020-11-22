@@ -1,0 +1,29 @@
+body{
+	background : aliceblue;
+}
+
+.thumbnail img{
+	width:100%;
+	height : 250px;
+}
+
+.thumbnail{
+	padding:0;
+	height : 400px;
+}
+
+.thumbnail .caption-full{
+	padding : 9px;
+}
+
+.jumbotron{
+	background : lightgreen;
+}
+
+.navbar{
+	background : lightblue;
+}
+
+.delete-form{
+	display : inline;
+}
