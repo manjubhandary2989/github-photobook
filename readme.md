@@ -1,6 +1,6 @@
 # Show Page
-* Review the RESTful routes we have learned so far
-* Add description to our camoground model
+* Review the RESTful routes
+* Add description to photobook model
 * Show db.collection.drop()
 * Add a show route/template
 
@@ -15,7 +15,7 @@
 
 # Add a Comment models
 * Make all errors go away
-* Display comments on campground show page
+* Display comments on photobook show page
 
 # Comment New/Create
 * Discuss nested Routes
@@ -25,15 +25,16 @@
 RESTFUL ROUTES
 
 name 	url 				verb 	desc.
-INDEX   /campgrounds		GET		Display all campgrounds
-NEW 	/campgrounds/new	GET		Displays forms to make a new campground
-CREATE	/campgrounds		POST	Add a new campground
-SHOW    /campground/:id		GET		Shows info about one campground
+INDEX   /memories			GET		Display all memories
+NEW 	/memories/new		GET		Displays forms to make a new entries
+CREATE	/memory				POST	Add a new memory
+SHOW    /memory/:id			GET		Shows info about one memory
 
 Comment Routes
 name 	url 							verb 	
-NEW 	/campground/:id/comments/new  	GET		
-CREATE	/campground/:id/comments		POST	
+NEW 	/memory/:id/memories/new  		GET		
+CREATE	/memory/:id/comments		POST	
+
 ## Style Show Page
 * Add sidebar to show page
 * Display comments nicely
@@ -70,23 +71,23 @@ CREATE	/campground/:id/comments		POST
 * Associate users and comments
 * Save authors name to a comment automatically
 
-## Users + Campgrounds
-* Prevent an unauthenticated user from creating a campground
-* Save username+id to newly created campground
+## Users + Memories
+* Prevent an unauthenticated user from creating a memory
+* Save username+id to newly created memory
 
-# Editing Campgrounds
+# Editing Memories
 * Add Method-Override
-* Add Edit Route for Campgrounds
+* Add Edit Route for Memories
 * Add Link to Edit Page
 * Add Update Route
 
-# Deleting Campgrounds
+# Deleting Memories
 * Add Destroy Route
 * Add Delete button
 
 # Authorization
-* User can only eidt his/her campgrounds
-* User can only delete his/her campgrounds
+* User can only eidt his/her memories
+* User can only delete his/her memories
 * Hide/Show edit and delete buttons
 
 # Editing Comments
@@ -94,23 +95,18 @@ CREATE	/campground/:id/comments		POST
 * Add Edit button
 * Add update route
 
-/campgrounds/:id/edit
-/campgrounds/:id/comments/:comment_id/edit
+/memories/:id/edit
+/memories/:id/comments/:comment_id/edit
 
 # Deleting Comments
 * Add Destroy router
 * Add Delete button
 
-Campground Destroy Route : /campgrounds/:id
-Comment Destroy Route : /campgrounds/:id/comments/:comment_id
+Memory Destroy Route : /memories/:id
+Comment Destroy Route : /memories/:id/comments/:comment_id
 
 # Authorization Part2: Comments
 * User can only edit his/her comments
-* User can onlu delete his/her comments
+* User can only delete his/her comments
 * Hide/Show edit and delete buttons
 * Refactor Middleware
-
-# Adding in Flash
-* Demo working version
-* Install and configure connect-flash
-* Add bootstrap alerts to header
